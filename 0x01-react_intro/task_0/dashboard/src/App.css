@@ -1,0 +1,46 @@
+.App {
+  height: 100vh;
+  --border-bottom: 4px solid rgb(226, 61, 61);
+  --color-primary: #E0354b;
+  --background-color-white: white;
+  --padding: 1.2rem;
+  --font-size-main: 1rem;
+}
+
+.App-logo {
+  height: 200px;
+  width: 200px;  
+}
+
+
+.App-header {
+  background-color: var(--background-color-white);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  color: white;
+  border-bottom: var(--border-bottom);
+}
+
+.App-header h1 {
+  color: var(--color-primary);
+  display: flex;
+}
+
+.App-body {
+  font-size: var(--font-size-main);
+  padding: calc(var(--padding) *2);
+  height: 50vh;
+
+}
+
+.App-footer {
+  border-top: var(--border-bottom);
+  text-align: center;
+  font-style: italic;
+  padding: var(--padding);
+}
+
+
+
