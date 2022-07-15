@@ -1,7 +1,7 @@
 import $ from "jquery";
 import _ from "lodash";
 
-const counter = 0;
+let counter = 0;
 
 $('body').append("<p>Holberton Dashboard</p>");
 $('body').append("<p>Dashboard Data for the students</p>");
