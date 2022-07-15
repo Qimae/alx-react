@@ -23,21 +23,18 @@
   
   },
   
-  "dependencies": {
-  
-    
-  "jquery": "^3.6.0",
-  
-    
-  "jQuery": "^1.7.4"
-  
-  },
-  
   "keywords": [],
   
   "author": "",
   
   "license": "ISC",
   
-  "description": ""
+  "description": "",
+  
+  "dependencies": {
+  
+    
+  "jquery": "^3.6.0"
+  
+  }
 }
