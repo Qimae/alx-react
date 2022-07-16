@@ -1,0 +1,16 @@
+.Notifications {
+    border: 1px dashed #E0354b;
+    padding: 1rem;
+}
+.Notifications img {
+    width: 10px;
+    height: 10px;  
+    padding: 1rem; 
+}
+ul li[data='default'] {
+    color: blue;
+}
+
+ul li[data='urgent'] {
+    color: red;
+}
