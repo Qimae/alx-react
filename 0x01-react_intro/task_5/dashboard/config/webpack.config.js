@@ -26,18 +26,16 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(gif|png|jpg|jpeg|svg)$/i,
-                type: 'asset/resource',
-                use: [
-                    "file-loader",
-                    {
-                        loader: "image-webpack-loader",
-                        options: {
-                            bypassOnDebug: true,
-                            disable: true,
-                        },
-                    },
-                ],
+                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+				use: [
+					{
+						loader: ['file-loader', 'image-webpack-loader'],
+						options: {
+							bypassOnDebug: true,
+							disable: true,
+						},
+					},
+				],
             },
             {
                 test: /\.(js|jsx)$/i,

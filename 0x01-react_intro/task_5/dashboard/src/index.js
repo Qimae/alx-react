@@ -1,3 +1,19 @@
-const $ = require('jquery');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App/App';
+import Notifications from './Notifications/Notifications';
 
-$('body').append('<h1>New webpack React App</h1>');
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Notifications />
+  </React.StrictMode>,
+  document.getElementById('root-notifications')
+);
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
