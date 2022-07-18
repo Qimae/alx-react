@@ -9,10 +9,11 @@ module.exports = {
         filename: 'bundle.js',
     },
     devServer: {
+        static: {
+            directory: path.resolve('./dist'),
+        },
         hot: true,
-        contentBase: path.resolve("./dist"),
-        compress: true,
-        port: 8564,
+        port: 8564
     },
     performance: {
         maxAssetSize: 1000000,
@@ -25,7 +26,8 @@ module.exports = {
                 use: ["style-loader", "css-loader"],
             },
             {
-                test: /\.(gif|png|jpe?g|svg)$/i,
+                test: /\.(gif|png|jpg|jpeg|svg)$/i,
+                type: 'asset/resource',
                 use: [
                     "file-loader",
                     {
@@ -36,6 +38,11 @@ module.exports = {
                         },
                     },
                 ],
+            },
+            {
+                test: /\.(js|jsx)$/i,
+                exclude: /node_modules/,
+                use: 'babel-loader'
             },
         ],
     },
