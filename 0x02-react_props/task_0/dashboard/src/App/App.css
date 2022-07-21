@@ -1,0 +1,8 @@
+.App {
+  height: 100vh;
+  --border-bottom: 4px solid rgb(226, 61, 61);
+  --color-primary: #E0354b;
+  --background-color-white: white;
+  --padding: 1.2rem;
+  --font-size-main: 1rem;
+}
