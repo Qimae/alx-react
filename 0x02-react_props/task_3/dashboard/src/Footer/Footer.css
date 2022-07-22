@@ -1,0 +1,11 @@
+:root {
+    --border-bottom: 4px solid rgb(226, 61, 61);
+    --padding: 1.2rem;
+}
+
+.App-footer {
+    border-top: var(--border-bottom);
+    text-align: center;
+    font-style: italic;
+    padding: var(--padding);
+}

@@ -1,0 +1,36 @@
+.menuItem {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
+.Notifications {
+    border: 1px dashed #E0354b;
+    padding: 6px 12px;
+    position: absolute;
+    top: 21px;
+    right: 7px;
+	margin-top: 12px;
+}
+
+.Notifications img {
+    width: 10px;
+    height: 10px;
+    padding: 1rem;
+}
+
+li[data-priority="default"] {
+    color: blue;
+}
+
+li[data-priority="urgent"] {
+    color: #E0354b;
+}
+
+li[data-notification-type="default"] {
+    color: blue;
+}
+
+li[data-notification-type="urgent"] {
+    color: #E0354b;
+}
