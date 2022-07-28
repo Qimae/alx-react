@@ -21,8 +21,28 @@ class App extends React.Component {
     {id: 2, value: "New resume available", type: "urgent"},
     {id: 3, html: {__html: getLatestNotification()}, type: "urgent"},
   ];
+
   constructor(props) {
     super(props);
+    this.isLoggedIn = props.isLoggedIn;
+    this.logOut = props.logOut;
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+
+  handleKeyDown(e) {
+    e.preventDefault();
+    if (e.ctrlKey && e.key === 'h') {
+        alert("Logging you out");
+        this.logOut();
+    }  
+  }
+
+  componentDidMount() {
+    window.addEventListener('keydown', this.handleKeyDown);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.handleKeyDown);
   }
 
   render () {
@@ -41,10 +61,12 @@ class App extends React.Component {
 
 App.defaultProps = {
   isLoggedIn: false,
+  logOut: () => {}
 };
 
 App.propTypes = {
-  isLoggedIn: PropTypes.bool
+  isLoggedIn: PropTypes.bool,
+  logOut: PropTypes.func
 };
 
 export default App;
